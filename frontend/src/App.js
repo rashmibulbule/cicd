@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    <div className="container">
+
+      <div className="card">
+
+        <h1>🚀 CI/CD Auto Deployment App</h1>
+
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Successfully deployed using:
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+        <ul>
+          <li>React JS</li>
+          <li>Docker</li>
+          <li>GitHub Actions</li>
+          <li>AWS EC2</li>
+        </ul>
+
+        <button>
+          Deployment Successful
+        </button>
+
+      </div>
+
     </div>
   );
 }
