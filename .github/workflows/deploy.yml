@@ -3,16 +3,13 @@ name: Deploy
 on:
   push:
     branches:
-      - main
+      - Main
 
 jobs:
-
   deploy:
-
     runs-on: ubuntu-latest
 
     steps:
-
       - name: Checkout
         uses: actions/checkout@v4
 
@@ -26,8 +23,21 @@ jobs:
 
           script: |
             cd ~/deploy/cicd
-            
-            git pull origin main
-            docker-compose down
-            docker-compose up --build -d
 
+            echo "Current Directory:"
+            pwd
+
+            echo "Files:"
+            ls
+
+            echo "Pulling latest code"
+            git pull origin Main
+
+            echo "Stopping containers"
+            docker compose down || docker-compose down
+
+            echo "Starting containers"
+            docker compose up --build -d || docker-compose up --build -d
+
+            echo "Running containers"
+            docker ps

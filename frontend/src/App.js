@@ -6,7 +6,7 @@ function App() {
 
       <div className="card">
 
-        <h1>🚀 CI/CD Auto Deployment App</h1>
+        <h1>🚀 CI/CD Auto Deployment App </h1>
 
         <p>
           Successfully deployed using:
