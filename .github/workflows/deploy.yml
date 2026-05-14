@@ -31,7 +31,7 @@ jobs:
             ls
 
             echo "Pulling latest code"
-            git pull origin Main
+            git pull origin main
 
             echo "Stopping containers"
             docker compose down || docker-compose down
